@@ -6,7 +6,8 @@ This project is an ETL pipeline designed to perform sentiment analysis on custom
 ---
 
 ## Technologies Used  
-> Coming soon...
+- Python (Pandas, NLTK, Transformers)  
+- AWS (S3, Glue, Lambda, Athena)  
 ---
 
 ## Project Structure  
