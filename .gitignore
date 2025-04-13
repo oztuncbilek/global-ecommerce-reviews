@@ -1,0 +1,10 @@
+# Secrets
+.env
+config/
+
+# IDE
+.vscode/
+.idea/
+
+# Data
+data/raw/
