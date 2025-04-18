@@ -35,9 +35,12 @@ def upload_to_s3(file_path, s3_key):
         print(f"Hata: {str(e)}")
 
 
+# upload_to_s3.py güncellemesi
 files_to_upload = [
-    ("train_clean.csv", "processed/train_clean.csv"),
-    ("test_clean.csv", "processed/test_clean.csv")
+    ("train_clean.parquet", "processed/train_clean.parquet"),
+    ("test_clean.parquet", "processed/test_clean.parquet"),
+    # ("train_clean.csv", "processed/train_clean.csv"),
+    # ("test_clean.csv", "processed/test_clean.csv")
 ]
 
 for local_file, s3_key in files_to_upload:
