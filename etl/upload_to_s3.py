@@ -11,7 +11,6 @@ BUCKET_NAME = "etl-project-global-reviews"
 
 
 def get_file_path(filename):
-    """Güvenli dosya yolu oluşturur."""
     current_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(current_dir)
     return os.path.join(project_root, "data", "processed", filename)
@@ -20,7 +19,7 @@ def get_file_path(filename):
 def upload_to_s3(file_path, s3_key):
     try:
         if not os.path.exists(file_path):
-            raise FileNotFoundError(f"Dosya bulunamadı: {file_path}")
+            raise FileNotFoundError(f"File not found: {file_path}")
         
         s3 = boto3.client(
             "s3",
@@ -30,7 +29,7 @@ def upload_to_s3(file_path, s3_key):
         )
         
         s3.upload_file(file_path, BUCKET_NAME, s3_key)
-        print(f"{os.path.basename(file_path)} başarıyla yüklendi -> s3://{BUCKET_NAME}/{s3_key}")
+        print(f"{os.path.basename(file_path)} uploaded succesfully -> s3://{BUCKET_NAME}/{s3_key}")
     except Exception as e:
         print(f"Hata: {str(e)}")
 
