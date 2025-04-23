@@ -26,9 +26,7 @@ End-to-end flow for processing e-commerce reviews with sentiment analysis:
   - Model vs manual labeling comparison
 
 ### 4. Machine Learning
-- **Runtime**: Glue PySpark (CPU-optimized)
-- **Model**: `distilbert-base-uncased-finetuned-sst-2-english`<br>
-  _(Accuracy: 91.3% on SST-2 benchmark)_
+
 
 ## Data Flow
 ```mermaid
